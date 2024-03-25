@@ -1,0 +1,126 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+h1.header {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 40px 0;
+  color: rgb(28, 218, 209);
+}
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  position: relative;
+  gap: 8px;
+}
+.tile {
+  color: yellow;
+  font-size: 3em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(28, 218, 209, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.right-border {
+  border-right: 0.2em solid rgb(7, 156, 248);
+}
+.bottom-border {
+  border-bottom: 0.2em solid rgb(7, 156, 248);
+}
+
+.strike {
+  position: absolute;
+  background-color: white;
+}
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 50%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 84%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 50%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 84%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  right: 5%;
+  transform: skewY(135deg);
+}
+.game-over {
+  text-align: center;
+  border: rgb(28, 218, 209) 8px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.reset-button {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgb(28, 218, 209);
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.label {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
